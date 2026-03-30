@@ -19,11 +19,24 @@ if (NOT glfw3_FOUND)
 endif()
 
 file(GLOB SOURCES 
-        "src/*.cpp"     
-        "VulkanEngine/*.cpp"
+    "src/*.cpp"     
+    "VulkanEngine/*.cpp"
 )
 
 add_executable(main ${SOURCES})
 
 target_link_libraries(main Vulkan::Vulkan glfw)
-target_include_directories(main PRIVATE ${CMAKE_SOURCE_DIR}/VulkanInterface)
+target_include_directories(main PRIVATE 
+
+    VulkanEngine
+    external/glm
+
+)
+
+add_custom_target(Copy_Resources ALL 
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+            ${CMAKE_SOURCE_DIR}/resources
+            ${CMAKE_BINARY_DIR}/resources
+)
+
+add_dependencies(main Copy_Resources)

@@ -1,4 +1,5 @@
 C:/Users/olive/OneDrive/Documents/C++/Vulkan/Second/build/CMakeFiles/main.dir
+C:/Users/olive/OneDrive/Documents/C++/Vulkan/Second/build/CMakeFiles/Copy_Resources.dir
 C:/Users/olive/OneDrive/Documents/C++/Vulkan/Second/build/CMakeFiles/edit_cache.dir
 C:/Users/olive/OneDrive/Documents/C++/Vulkan/Second/build/CMakeFiles/rebuild_cache.dir
 C:/Users/olive/OneDrive/Documents/C++/Vulkan/Second/build/CMakeFiles/list_install_components.dir

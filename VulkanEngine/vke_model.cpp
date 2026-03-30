@@ -8,7 +8,7 @@
 namespace vke
 {
 
-VkeModel::VkeModel(VkeDevice &device, const std::vector<Vertex> &vertices) : VkeDevice(device)
+VkeModel::VkeModel(vke::VkeDevice &device, const std::vector<Vertex> &vertices) : VkeDevice(device)
 {
     createVertexBuffers(vertices);
 }
@@ -37,7 +37,7 @@ void VkeModel::createVertexBuffers(const std::vector<Vertex> &vertices)
 
     void *data;
     vkMapMemory(VkeDevice.device(), vertexBufferMemory, 0, bufferSize, 0, &data);
-    memcpy(data, vertices.data(), static_cast<size_t)(bufferSize));
+    memcpy(data, vertices.data(), static_cast<size_t>(bufferSize));
     vkUnmapMemory(VkeDevice.device(), vertexBufferMemory);
 }
 
